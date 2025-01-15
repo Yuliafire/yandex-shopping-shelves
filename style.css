@@ -13,8 +13,6 @@
   justify-content: center;
   padding-block: 100px;
   background-color: aliceblue;
-  /* max-width: 300px; */
-  /* height: 600px; */
 }
 
 .shelf-one,
@@ -80,11 +78,9 @@
 .salad {
 }
 
-
 .wrapper {
-    position: relative; 
+  position: relative;
 }
-
 
 .basket {
   position: absolute;
@@ -92,4 +88,43 @@
   left: -30px;
   /* right: 20px; */
   /* left: -px; */
+}
+
+.button-pay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  position: absolute;
+  width: 174px;
+  height: 56px;
+  left: calc(50% - 174px / 2);
+  top: 524px;
+  background: #fce000;
+  border: 1px solid #fce000;
+  border-radius: 16px;
+  font-family: "YS Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: -0.005em;
+  /* Theme/Default/Day/Text */
+  color: #21201f;
+  /* position: absolute; */
+  margin-top: 50px;
+  opacity: 0;
+}
+
+.button-pay-visible {
+  opacity: 1;
+}
+
+.button-pay:hover {
+
+}
+
+.button-pay:active {
+
 }

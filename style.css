@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 100px;
+  background-color: aliceblue;
+  /* max-width: 300px; */
+  /* height: 600px; */
+}
+
+.shelf-one,
+.shelf-two,
+.shelf-three {
+  position: relative;
+}
+
+.shelf-one {
+  display: flex;
+  top: -430px;
+  gap: 5px;
+  align-items: end;
+  left: 20px;
+}
+
+.shelf-two {
+  display: flex;
+  align-items: flex-end;
+  left: 20px;
+  top: -400px;
+  gap: 5px;
+}
+
+.shelf-three {
+  display: flex;
+  align-items: flex-end;
+  left: 20px;
+  top: -380px;
+  gap: 5px;
+}
+
+.item {
+  object-fit: contain;
+}
+
+.wine {
+  /* position: absolute; */
+}
+
+.milk {
+}
+
+.honey {
+}
+
+.cheese {
+}
+
+.chicken {
+}
+.beef {
+}
+.chips {
+}
+
+.pineapple {
+}
+.banana {
+}
+.apple {
+}
+.salad {
+}
+
+
+.wrapper {
+    position: relative; 
+}
+
+
+.basket {
+  position: absolute;
+  top: 340px;
+  left: -30px;
+  /* right: 20px; */
+  /* left: -px; */
+}

@@ -1,59 +1,73 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   height: auto;
 }
 
 .container {
-  width: 100%;
-  max-width: 18.75rem;
-  height: 37.5rem;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 18.75rem;
+  /* height: 37.5rem; */
+  position: relative;
+  padding-block: 20px;
   margin: 0 auto;
+  height: auto;
 }
 
 .wrapper {
   width: 13.25rem;
   margin: 1.875rem auto 0;
-  /* height: 570px; */
-  height: auto;
   height: 100vh;
+  padding-block: 20px;
+}
+
+.shelf-one,
+.shelf-two,
+.shelf-three {
+  display: flex;
+  align-items: end;
+  position: relative;
 }
 
 .shelf-one {
-  position: relative;
   top: -19.375rem;
   left: -4.6875rem;
-  display: flex;
-  align-items: end;
+}
+
+.wine,
+.milk,
+.honey,
+.cheese {
+  position: absolute;
 }
 
 .wine {
-  position: absolute;
   left: 6.25rem;
 }
 
 .milk {
-  position: absolute;
   left: 8.75rem;
 }
 
 .honey {
-  position: absolute;
   left: 11.25rem;
 }
 
 .cheese {
-  position: absolute;
   left: 14.375rem;
 }
 
@@ -62,13 +76,10 @@
 .basket-thirdState {
   width: 12.5rem;
   height: 12.5rem;
-  background-color: #91919100;
+  position: relative;
+  left: 2.5rem;
   display: flex;
   align-items: end;
-  position: relative;
-  top: -6.875rem;
-  left: 2.5rem;
-  z-index: 5;
 }
 
 .basket-firstState {
@@ -87,25 +98,25 @@
 }
 
 .shelf-two {
-  position: relative;
   top: -13.4375rem;
   left: -4.6875rem;
-  display: flex;
-  align-items: end;
+}
+
+.beef,
+.chicken,
+.chips {
+  position: absolute;
 }
 
 .beef {
-  position: absolute;
   left: 5rem;
 }
 
 .chicken {
-  position: absolute;
   left: 8.75rem;
 }
 
 .chips {
-  position: absolute;
   left: 12.5rem;
 }
 
@@ -115,73 +126,69 @@
 }
 
 .shelf-three {
-  position: relative;
   top: -7.1875rem;
   left: -4.6875rem;
-  display: flex;
-  align-items: end;
+}
+
+.pineapple,
+.banana,
+.apple,
+.salad {
+  position: absolute;
 }
 
 .pineapple {
-  position: absolute;
   left: 5.3125rem;
 }
 
 .banana {
-  position: absolute;
   left: 8.125rem;
 }
 
 .apple {
-  position: absolute;
   left: 11.875rem;
 }
 
 .salad {
-  position: absolute;
   left: 14.375rem;
 }
 
 .basket-firstState .product:nth-child(2) {
-  transform: translatex(-10px);
+  transform: translateX(-10px);
 }
 
 .basket-firstState .product:nth-child(3) {
-  transform: translatex(-20px);
+  transform: translateX(-20px);
 }
 
 .basket-firstState .product:nth-child(4) {
-  transform: translatex(-30px);
+  transform: translateX(-30px);
 }
 
 .basket-secondState .product:nth-child(2) {
-  transform: translatex(-10px);
+  transform: translateX(-10px);
 }
 
 .basket-secondState .product:nth-child(3) {
-  transform: translatex(-20px);
-}
-
-.basket-secondState .product:nth-child(4) {
-  transform: translatex(-30px);
+  transform: translateX(-20px);
 }
 
 .basket-thirdState .product:nth-child(2) {
-  transform: translatex(-10px);
+  transform: translateX(-10px);
 }
 
 .basket-thirdState .product:nth-child(3) {
-  transform: translatex(-20px);
+  transform: translateX(-20px);
 }
 
 .basket-thirdState .product:nth-child(4) {
-  transform: translatex(-30px);
+  transform: translate(-30px);
 }
 
 .basket {
   position: relative;
-  top: -43.4375rem; /* -695px */
-  left: -1.875rem; /* -30px */
+  top: -43.4375rem;
+  left: -1.875rem;
   z-index: 100;
 }
 
@@ -205,23 +212,6 @@
   opacity: 0;
 }
 
-.pulsate {
-  animation: pulsate 1s infinite;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-}
-
-@keyframes pulsate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .btn-pay-visible {
   opacity: 1;
 }
@@ -238,4 +228,21 @@
   border-color: #d4b000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
   transform: translateY(2px);
+}
+
+.pulsate {
+  animation: pulsate 1s infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

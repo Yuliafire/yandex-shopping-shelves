@@ -204,12 +204,15 @@
   line-height: 17px;
   letter-spacing: -0.5%;
   position: absolute;
-  bottom: 3.125rem;
+  bottom: 12.125rem;
   left: 4.0625rem;
   z-index: 200;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 1s ease, opacity 1s ease-in-out;
   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-pay-visible {

@@ -1,4 +1,3 @@
-"use strict";
 
 const products = document.querySelectorAll(".product");
 const basketFirstState = document.querySelector(".basket-firstState");
@@ -58,6 +57,7 @@ function handleDropOrTouchEnd(e) {
     basketFirstState,
     productName,
   );
+  
   updateBasket(
     productsInBasket.basketSecondState,
     basketSecondState,

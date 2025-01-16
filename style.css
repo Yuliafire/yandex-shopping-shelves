@@ -1,95 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .container {
-  margin: 0 auto;
   width: 100%;
+  max-width: 300px;
+  height: 600px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-block: 100px;
-  background-color: aliceblue;
-}
-
-.shelf-one,
-.shelf-two,
-.shelf-three {
-  position: relative;
-}
-
-.shelf-one {
-  display: flex;
-  top: -430px;
-  gap: 5px;
-  align-items: end;
-  left: 20px;
-}
-
-.shelf-two {
-  display: flex;
-  align-items: flex-end;
-  left: 20px;
-  top: -400px;
-  gap: 5px;
-}
-
-.shelf-three {
-  display: flex;
-  align-items: flex-end;
-  left: 20px;
-  top: -380px;
-  gap: 5px;
-}
-
-.item {
-  object-fit: contain;
-}
-
-.wine {
-  /* position: absolute; */
-}
-
-.milk {
-}
-
-.honey {
-}
-
-.cheese {
-}
-
-.chicken {
-}
-.beef {
-}
-.chips {
-}
-
-.pineapple {
-}
-.banana {
-}
-.apple {
-}
-.salad {
+  margin: 0 auto;
 }
 
 .wrapper {
+  width: 212px;
+  margin: 30px auto 0;
+  height: 570px;
+}
+
+.shelf-one {
   position: relative;
+  top: -310px;
+  left: -75px;
+  display: flex;
+  align-items: end;
 }
 
-.basket {
+.wine {
   position: absolute;
-  top: 340px;
-  left: -30px;
-  z-index: 100;
+  left: 100px;
 }
 
-.basket-firstState {
+.milk {
+  position: absolute;
+  left: 140px;
+}
+
+.honey {
+  position: absolute;
+  left: 180px;
+}
+
+.cheese {
+  position: absolute;
+  left: 230px;
+}
+
+.basket-firstState,
+.basket-secondState,
+.basket-thirdState {
   width: 200px;
   height: 200px;
   background-color: #91919100;
@@ -101,34 +68,172 @@
   z-index: 5;
 }
 
+.basket-firstState {
+  top: -110px;
+  z-index: 5;
+}
+
 .basket-secondState {
-  width: 200px;
-  height: 200px;
-  background-color: #934f4f00;
-  display: flex;
-  align-items: end;
-  position: relative;
   top: -310px;
-  left: 40px;
   z-index: 4;
 }
 
 .basket-thirdState {
-  width: 200px;
-  height: 200px;
-  background-color: #76bd7f00;
-  display: flex;
-  align-items: end;
-  position: relative;
   top: -510px;
-  left: 40px;
   z-index: 3;
 }
 
+/* .basket-one .wine,
+.basket-one .milk,
+.basket-one .honey,
+.basket-one .cheese {
+  display: block;
+  position: static;
+} */
 
+.shelf-two {
+  position: relative;
+  top: -215px;
+  left: -75px;
+  display: flex;
+  align-items: end;
+}
+
+.beef {
+  position: absolute;
+  left: 80px;
+}
+
+.chicken {
+  position: absolute;
+  left: 140px;
+}
+
+.chips {
+  position: absolute;
+  left: 200px;
+}
+
+.basket .product {
+  display: block;
+  position: static;
+}
+
+/* .basket-two .beef,
+.basket-two .chicken,
+.basket-two .chips {
+  display: block;
+  position: static;
+} */
+
+.shelf-three {
+  position: relative;
+  top: -115px;
+  left: -75px;
+  display: flex;
+  align-items: end;
+}
+
+.pineapple {
+  position: absolute;
+  left: 85px;
+}
+
+.banana {
+  position: absolute;
+  left: 130px;
+}
+
+.apple {
+  position: absolute;
+  left: 190px;
+}
+
+.salad {
+  position: absolute;
+  left: 230px;
+}
+
+/* .basket-three .pineapple,
+.basket-three .banana,
+.basket-three .apple,
+.basket-three .salad
+ {
+  display: block;
+  position: static;
+} */
+
+/* staggered effect  applied */
+/* A staggered effect is a visual design */
+/* technique where elements are slightly offset */
+/* or shifted from each other in a sequential manner. */
+
+.basket-firstState .product:nth-child(2) {
+  transform: translatex(-10px);
+}
+
+.basket-firstState .product:nth-child(3) {
+  transform: translatex(-20px);
+}
+
+.basket-firstState .product:nth-child(4) {
+  transform: translatex(-30px);
+}
+
+.basket-secondState .product:nth-child(2) {
+  transform: translatex(-10px);
+}
+
+.basket-secondState .product:nth-child(3) {
+  transform: translatex(-20px);
+}
+
+.basket-secondState .product:nth-child(4) {
+  transform: translatex(-30px);
+}
+
+.basket-thirdState .product:nth-child(2) {
+  transform: translatex(-10px);
+}
+
+.basket-thirdState .product:nth-child(3) {
+  transform: translatex(-20px);
+}
+
+.basket-thirdState .product:nth-child(4) {
+  transform: translatex(-30px);
+}
+
+.basket {
+  position: relative;
+  top: -695px;
+  left: -30px;
+  z-index: 100;
+}
+
+.btn-pay {
+  width: 174px;
+  height: 56px;
+  background-color: #fce000;
+  border: #fce000;
+  border-radius: 16px;
+  font-family: YS Text, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.5%;
+  position: absolute;
+  bottom: 50px;
+  left: 65px;
+  z-index: 200;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 1s ease, opacity 1s ease-in-out;
+  opacity: 0;
+}
 
 .pulsate {
   animation: pulsate 1s infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 @keyframes pulsate {
@@ -143,48 +248,18 @@
   }
 }
 
-
-
-.button-pay {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 18px;
-  position: absolute;
-  z-index: 200;
-  width: 174px;
-  height: 56px;
-  left: calc(50% - 174px / 2);
-  top: 524px;
-  background: #fce000;
-  border: 1px solid #fce000;
-  border-radius: 16px;
-  font-family: "YS Text";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 17px;
-  letter-spacing: -0.005em;
-  /* Theme/Default/Day/Text */
-  color: #21201f;
-  /* position: absolute; */
-  margin-top: 50px;
-  /* opacity: 0; */
-}
-
-.button-pay-visible {
+.btn-pay-visible {
   opacity: 1;
 }
 
-.button-pay:hover {
+.btn-pay:hover {
   background-color: #e6c200;
   border-color: #e6c200;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
 }
 
-.button-pay:active {
+.btn-pay:active {
   background-color: #d4b000;
   border-color: #d4b000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -66,7 +72,6 @@
   align-items: end;
   position: relative;
   left: 2.5rem;
-  z-index: 5;
 }
 
 .basket-firstState {
@@ -97,18 +102,25 @@
   left: -4.6875rem;
 }
 
-.beef {
+.beef,
+.chicken,
+.chips,
+.pineapple,
+.banana,
+.apple,
+.salad {
   position: absolute;
+}
+
+.beef {
   left: 5rem;
 }
 
 .chicken {
-  position: absolute;
   left: 8.75rem;
 }
 
 .chips {
-  position: absolute;
   left: 12.5rem;
 }
 
@@ -125,22 +137,18 @@
 }
 
 .pineapple {
-  position: absolute;
   left: 5.3125rem;
 }
 
 .banana {
-  position: absolute;
   left: 8.125rem;
 }
 
 .apple {
-  position: absolute;
   left: 11.875rem;
 }
 
 .salad {
-  position: absolute;
   left: 14.375rem;
 }
 

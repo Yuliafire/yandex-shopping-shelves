@@ -4,174 +4,144 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 300px;
-  height: 600px;
+  max-width: 18.75rem;
+  height: 37.5rem;
   position: relative;
   margin: 0 auto;
-  /* height: 100vh; */
 }
 
 .wrapper {
-  width: 212px;
-  margin: 30px auto 0;
-  height: 570px;
+  width: 13.25rem;
+  margin: 1.875rem auto 0;
+  height: 35.625rem;
+}
+
+.shelf-one,
+.shelf-two,
+.shelf-three {
+  display: flex;
+  align-items: end;
+  position: relative;
 }
 
 .shelf-one {
-  position: relative;
-  top: -310px;
-  left: -75px;
-  display: flex;
-  align-items: end;
+  top: -19.375rem;
+  left: -4.6875rem;
 }
 
 .wine {
   position: absolute;
-  left: 100px;
+  left: 6.25rem;
 }
 
 .milk {
   position: absolute;
-  left: 140px;
+  left: 8.75rem;
 }
 
 .honey {
   position: absolute;
-  left: 180px;
+  left: 11.25rem;
 }
 
 .cheese {
   position: absolute;
-  left: 230px;
+  left: 14.375rem;
 }
 
 .basket {
   position: relative;
-  top: -695px;
-  left: -30px;
+  top: -43.4375rem;
+  left: -1.875rem;
   z-index: 100;
 }
 
-.basket-firstState {
-  width: 200px;
-  height: 200px;
+.basket-firstState,
+.basket-secondState,
+.basket-thirdState {
+  width: 12.5rem;
+  height: 12.5rem;
   background-color: #91919100;
   display: flex;
   align-items: end;
   position: relative;
-  top: -110px;
-  left: 40px;
+  left: 2.5rem;
+  z-index: 5;
+}
+
+.basket-firstState {
+  top: -6.875rem;
   z-index: 5;
 }
 
 .basket-secondState {
-  width: 200px;
-  height: 200px;
-  background-color: #934f4f00;
-  display: flex;
-  align-items: end;
-  position: relative;
-  top: -310px;
-  left: 40px;
+  top: -19.375rem;
   z-index: 4;
 }
 
 .basket-thirdState {
-  width: 200px;
-  height: 200px;
-  background-color: #76bd7f00;
-  display: flex;
-  align-items: end;
-  position: relative;
-  top: -510px;
-  left: 40px;
+  top: -31.875rem;
   z-index: 3;
 }
 
-.basket-firstState .wine {
-  display: block;
-  position: static;
-}
-
-.basket-firstState .milk {
-  display: block;
-  position: static;
-}
-
-.basket-firstState .cake {
-  display: block;
-  position: static;
-}
-
-.basket-firstState .chese {
+.basket-firstState .wine,
+.basket-firstState .milk,
+.basket-firstState .honey,
+.basket-firstState .cheese {
   display: block;
   position: static;
 }
 
 .shelf-two {
-  position: relative;
-  top: -215px;
-  left: -75px;
-  display: flex;
-  align-items: end;
+  top: -13.4375rem;
+  left: -4.6875rem;
 }
 
 .beef {
   position: absolute;
-  left: 80px;
+  left: 5rem;
 }
 
 .chicken {
   position: absolute;
-  left: 140px;
+  left: 8.75rem;
 }
 
 .chips {
   position: absolute;
-  left: 200px;
+  left: 12.5rem;
 }
 
-.basket-secondState .beef {
-  display: block;
-  position: static;
-}
-
-.basket-secondState .chicken {
-  display: block;
-  position: static;
-}
-
-.basket-secondState .cheeps {
+.basket-secondState .beef,
+.basket-secondState .chicken,
+.basket-secondState .chips {
   display: block;
   position: static;
 }
 
 .shelf-three {
-  position: relative;
-  top: -115px;
-  left: -75px;
-  display: flex;
-  align-items: end;
+  top: -7.1875rem;
+  left: -4.6875rem;
 }
 
 .pineapple {
   position: absolute;
-  left: 85px;
+  left: 5.3125rem;
 }
 
 .banana {
   position: absolute;
-  left: 130px;
+  left: 8.125rem;
 }
 
 .apple {
   position: absolute;
-  left: 190px;
+  left: 11.875rem;
 }
 
 .salad {
   position: absolute;
-  left: 230px;
+  left: 14.375rem;
 }
 
 .basket-thirdState .pineapple,
@@ -219,26 +189,26 @@
 }
 
 .btn-pay {
-  width: 174px;
-  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10.875rem;
+  height: 3.5rem;
   background-color: #fce000;
   border: #fce000;
-  border-radius: 16px;
+  border-radius: 1rem;
   font-family: YS Text, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 17px;
+  line-height: 1.0625rem;
   letter-spacing: -0.5%;
   position: absolute;
-  bottom: 50px;
-  left: 65px;
+  bottom: 3.125rem;
+  left: 4.0625rem;
   z-index: 200;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 1s ease, opacity 1s ease-in-out;
   opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn-pay-visible {

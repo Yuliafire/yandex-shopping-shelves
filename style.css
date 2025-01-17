@@ -1,218 +1,244 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-}
-
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 18.75rem;
-  /* height: 37.5rem; */
+  max-width: 300px;
+  height: 600px;
   position: relative;
-  padding-block: 20px;
   margin: 0 auto;
-  height: auto;
+  /* height: 100vh; */
 }
 
 .wrapper {
-  width: 13.25rem;
-  margin: 1.875rem auto 0;
-  height: 100vh;
-  padding-block: 20px;
-}
-
-.shelf-one,
-.shelf-two,
-.shelf-three {
-  display: flex;
-  align-items: end;
-  position: relative;
+  width: 212px;
+  margin: 30px auto 0;
+  height: 570px;
 }
 
 .shelf-one {
-  top: -19.375rem;
-  left: -4.6875rem;
-}
-
-.wine,
-.milk,
-.honey,
-.cheese {
-  position: absolute;
-}
-
-.wine {
-  left: 6.25rem;
-}
-
-.milk {
-  left: 8.75rem;
-}
-
-.honey {
-  left: 11.25rem;
-}
-
-.cheese {
-  left: 14.375rem;
-}
-
-.basket-firstState,
-.basket-secondState,
-.basket-thirdState {
-  width: 12.5rem;
-  height: 12.5rem;
   position: relative;
-  left: 2.5rem;
+  top: -310px;
+  left: -75px;
   display: flex;
   align-items: end;
 }
 
+.wine {
+  position: absolute;
+  left: 100px;
+}
+
+.milk {
+  position: absolute;
+  left: 140px;
+}
+
+.honey {
+  position: absolute;
+  left: 180px;
+}
+
+.cheese {
+  position: absolute;
+  left: 230px;
+}
+
+.basket {
+  position: relative;
+  top: -695px;
+  left: -30px;
+  z-index: 100;
+}
+
 .basket-firstState {
-  top: -6.875rem;
+  width: 200px;
+  height: 200px;
+  background-color: #91919100;
+  display: flex;
+  align-items: end;
+  position: relative;
+  top: -110px;
+  left: 40px;
   z-index: 5;
 }
 
 .basket-secondState {
-  top: -19.375rem;
+  width: 200px;
+  height: 200px;
+  background-color: #934f4f00;
+  display: flex;
+  align-items: end;
+  position: relative;
+  top: -310px;
+  left: 40px;
   z-index: 4;
 }
 
 .basket-thirdState {
-  top: -31.875rem;
+  width: 200px;
+  height: 200px;
+  background-color: #76bd7f00;
+  display: flex;
+  align-items: end;
+  position: relative;
+  top: -510px;
+  left: 40px;
   z-index: 3;
 }
 
-.shelf-two {
-  top: -13.4375rem;
-  left: -4.6875rem;
+.basket-firstState .wine {
+  display: block;
+  position: static;
 }
 
-.beef,
-.chicken,
-.chips {
-  position: absolute;
+.basket-firstState .milk {
+  display: block;
+  position: static;
+}
+
+.basket-firstState .cake {
+  display: block;
+  position: static;
+}
+
+.basket-firstState .chese {
+  display: block;
+  position: static;
+}
+
+.shelf-two {
+  position: relative;
+  top: -215px;
+  left: -75px;
+  display: flex;
+  align-items: end;
 }
 
 .beef {
-  left: 5rem;
+  position: absolute;
+  left: 80px;
 }
 
 .chicken {
-  left: 8.75rem;
+  position: absolute;
+  left: 140px;
 }
 
 .chips {
-  left: 12.5rem;
+  position: absolute;
+  left: 200px;
 }
 
-.basket .product {
+.basket-secondState .beef {
+  display: block;
+  position: static;
+}
+
+.basket-secondState .chicken {
+  display: block;
+  position: static;
+}
+
+.basket-secondState .cheeps {
   display: block;
   position: static;
 }
 
 .shelf-three {
-  top: -7.1875rem;
-  left: -4.6875rem;
-}
-
-.pineapple,
-.banana,
-.apple,
-.salad {
-  position: absolute;
+  position: relative;
+  top: -115px;
+  left: -75px;
+  display: flex;
+  align-items: end;
 }
 
 .pineapple {
-  left: 5.3125rem;
+  position: absolute;
+  left: 85px;
 }
 
 .banana {
-  left: 8.125rem;
+  position: absolute;
+  left: 130px;
 }
 
 .apple {
-  left: 11.875rem;
+  position: absolute;
+  left: 190px;
 }
 
 .salad {
-  left: 14.375rem;
+  position: absolute;
+  left: 230px;
+}
+
+.basket-thirdState .pineapple,
+.basket-thirdState .banana,
+.basket-thirdState .apple,
+.basket-three .salad {
+  display: block;
+  position: static;
 }
 
 .basket-firstState .product:nth-child(2) {
-  transform: translateX(-10px);
+  transform: translatex(-10px);
 }
 
 .basket-firstState .product:nth-child(3) {
-  transform: translateX(-20px);
+  transform: translatex(-20px);
 }
 
 .basket-firstState .product:nth-child(4) {
-  transform: translateX(-30px);
+  transform: translatex(-30px);
 }
 
 .basket-secondState .product:nth-child(2) {
-  transform: translateX(-10px);
+  transform: translatex(-10px);
 }
 
 .basket-secondState .product:nth-child(3) {
-  transform: translateX(-20px);
+  transform: translatex(-20px);
+}
+
+.basket-secondState .product:nth-child(4) {
+  transform: translatex(-30px);
 }
 
 .basket-thirdState .product:nth-child(2) {
-  transform: translateX(-10px);
+  transform: translatex(-10px);
 }
 
 .basket-thirdState .product:nth-child(3) {
-  transform: translateX(-20px);
+  transform: translatex(-20px);
 }
 
 .basket-thirdState .product:nth-child(4) {
-  transform: translate(-30px);
-}
-
-.basket {
-  position: relative;
-  top: -43.4375rem;
-  left: -1.875rem;
-  z-index: 100;
+  transform: translatex(-30px);
 }
 
 .btn-pay {
-  width: 10.875rem;
-  height: 3.5rem;
+  width: 174px;
+  height: 56px;
   background-color: #fce000;
   border: #fce000;
   border-radius: 16px;
   font-family: YS Text, sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   line-height: 17px;
   letter-spacing: -0.5%;
   position: absolute;
-  bottom: 12.125rem;
-  left: 4.0625rem;
+  bottom: 50px;
+  left: 65px;
   z-index: 200;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 1s ease, opacity 1s ease-in-out;
   opacity: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-pay-visible {

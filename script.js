@@ -1,42 +1,34 @@
-
 const products = document.querySelectorAll(".product");
+const basket = document.querySelector(".basket");
 const basketFirstState = document.querySelector(".basket-firstState");
 const basketSecondState = document.querySelector(".basket-secondState");
 const basketThirdState = document.querySelector(".basket-thirdState");
 const btnPay = document.querySelector(".btn-pay");
-const basket = document.querySelector(".basket");
+
 const productsInBasket = {
   basketFirstState: ["wine", "milk", "honey", "cheese"],
   basketSecondState: ["beef", "chicken", "chips"],
   basketThirdState: ["pineapple", "banana", "apple", "salad"],
 };
 
-let current = null; //Holds the reference to the product element that is currently being dragged or touched.
+let current = null;
+let count = 0;
+let zIndex = 1;
 
-let count = 0; // Keeps track of the number of products successfully added to any of the baskets.
-let zIndex = 1; // Manages the stacking order of the baskets to ensure the most recently updated basket appears on top.
-
-// Add event listeners to products
 products.forEach((elem) => {
   elem.addEventListener("dragstart", handleDragStart);
   elem.addEventListener("touchstart", handleTouchStart);
 });
 
-// Handle drag start event
 function handleDragStart(e) {
   current = this;
 }
 
-// Handle touch start event
 function handleTouchStart(e) {
   current = this;
 }
-
-// Prevent default behavior for dragover and touchmove events
 basket.addEventListener("dragover", (e) => e.preventDefault());
 basket.addEventListener("touchmove", (e) => e.preventDefault());
-
-// Update basket with the current product
 function updateBasket(productsInBasket, basket, productName) {
   if (productsInBasket.includes(productName)) {
     basket.appendChild(current);
@@ -46,8 +38,7 @@ function updateBasket(productsInBasket, basket, productName) {
   }
 }
 
-// Handle drop and touchend events
-function handleDropOrTouchEnd(e) {
+function handleDropTouchEnd(e) {
   if (!current) return;
   const productName = current.className.split(" ")[1];
   console.log(productName);
@@ -57,12 +48,13 @@ function handleDropOrTouchEnd(e) {
     basketFirstState,
     productName,
   );
-  
+
   updateBasket(
     productsInBasket.basketSecondState,
     basketSecondState,
     productName,
   );
+
   updateBasket(
     productsInBasket.basketThirdState,
     basketThirdState,
@@ -74,17 +66,15 @@ function handleDropOrTouchEnd(e) {
   }
 }
 
-basket.addEventListener("drop", handleDropOrTouchEnd);
-basket.addEventListener("touchend", handleDropOrTouchEnd);
+basket.addEventListener("drop", handleDropTouchEnd);
+basket.addEventListener("touchend", handleDropTouchEnd);
 
-// Handle pay button click
 btnPay.addEventListener("click", () => {
-  window.open("https://lavka.yandex.ru/", "_blank");
+    window.open("https://lavka.yandex.ru/", "_blank");
 });
 
-// Toggle pulse animation for pay button
 function togglePulse() {
-  btnPay.classList.toggle("pulsate");
+    btnPay.classList.toggle("pulsate");
 }
 
 setInterval(togglePulse, 2000);
